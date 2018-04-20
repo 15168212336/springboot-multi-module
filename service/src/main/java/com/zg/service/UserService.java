@@ -1,7 +1,7 @@
 package com.zg.service;
 
-import com.zg.vo.UserVo;
+import com.zg.entity.User;
 
 public interface UserService {
-    public UserVo doLogin(String userName);
+    public User doLogin(String userName);
 }

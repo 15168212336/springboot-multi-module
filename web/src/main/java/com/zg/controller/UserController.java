@@ -1,5 +1,6 @@
 package com.zg.controller;
 
+import com.zg.entity.User;
 import com.zg.service.UserService;
 import com.zg.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,11 @@ public class UserController {
     UserService userService;
     @RequestMapping(value = "/login")
     public UserVo doLogin(@RequestParam String username, @RequestParam String password) {
-        return userService.doLogin(username);
+        UserVo userVo = new UserVo();
+        User user = userService.doLogin(username);
+        userVo.setId(user.getId());
+        userVo.setUsername(user.getUsername());
+        userVo.setPassworod(user.getPassword());
+        return userVo;
     }
 }

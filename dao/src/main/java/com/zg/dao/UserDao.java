@@ -1,7 +1,7 @@
 package com.zg.dao;
 
-import com.zg.vo.UserVo;
+import com.zg.entity.User;
 
 public interface UserDao {
-    public UserVo getUserByUserName(String userName);
+    public User getUserByUserName(String userName);
 }

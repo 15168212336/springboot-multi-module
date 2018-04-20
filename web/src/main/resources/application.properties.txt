@@ -1,13 +1,13 @@
 server.port=9090
 #
 #
-## 数据库访问配置
-## 主数据源，默认的
+# 数据库访问配置
+# 主数据源，默认的
 #spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
-#spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-#spring.datasource.url=jdbc:mysql://localhost:3306/soyea_gzf?useUnicode=true&amp;characterEncoding=utf-8&useSSL=false
-#spring.datasource.username=root
-#spring.datasource.password=456412
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/demodb?useUnicode=true&amp;characterEncoding=utf-8&useSSL=false
+spring.datasource.username=root
+spring.datasource.password=456412
 #
 #### 具体文档可以看 https://github.com/alibaba/druid/tree/master/druid-spring-boot-starter
 #
@@ -63,9 +63,9 @@ server.port=9090
 ## Show or not log for each sql query
 #spring.jpa.show-sql=false
 #spring.jpa.generate-ddl=true
-## Hibernate ddl auto (create, create-drop, update)
-##create：加载hibernate时会删除上一次生成的表，然后根据model类重新生成新表
-#spring.jpa.hibernate.ddl-auto=update
+# Hibernate ddl auto (create, create-drop, update)
+#create：加载hibernate时会删除上一次生成的表，然后根据model类重新生成新表
+spring.jpa.hibernate.ddl-auto=update
 ##spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
 #spring.jpa.hibernate.naming_strategy=org.hibernate.cfg.ImprovedNamingStrategy
 ##spring.jpa.database=org.hibernate.dialect.MySQL5InnoDBDialect

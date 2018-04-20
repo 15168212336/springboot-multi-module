@@ -34,4 +34,7 @@ public class UserVo {
         this.username = username;
         this.passworod = passworod;
     }
+
+    public UserVo() {
+    }
 }

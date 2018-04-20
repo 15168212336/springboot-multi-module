@@ -1,6 +1,7 @@
 package com.zg.service.impl;
 
 import com.zg.dao.UserDao;
+import com.zg.entity.User;
 import com.zg.service.UserService;
 import com.zg.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDao userDao;
     @Override
-    public UserVo doLogin(String userName) {
+    public User doLogin(String userName) {
         return  userDao.getUserByUserName(userName);
     }
 }
